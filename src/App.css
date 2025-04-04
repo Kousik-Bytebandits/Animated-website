@@ -102,15 +102,16 @@ letter-spacing: -1px;
 
 /* About Us Section Styles */
 .about-section {
-  display: flex;
-  justify-content: space-between;
+ 
   align-items: center;
   padding: 100px 50px;
   max-width: 1200px;
   margin: 0 auto;
   color: #333;
 }
-
+.main-content{
+  display: flex;
+}
 .left-content {
   flex: 1;
   font-size: 2.5rem;
@@ -125,17 +126,277 @@ letter-spacing: -1px;
 
 .intro-text {
   border-left: 4px solid orange;
-  padding-left: 10px;
-  font-size: 1rem;
+  padding-left: 30px;
+  font-size: small;
   margin-top: 10px;
-  max-width: 300px;
+  max-width: 400px;
   color: #666;
 }
 
 .right-content {
+  margin-top: 44px;
   flex: 2;
-  font-size: 1.1rem;
+  font-size: 16px;
   line-height: 1.6;
   color: #444;
   max-width: 600px;
+}
+.image-section {
+  display: flex;
+  justify-content: center;
+  gap: 100px;
+  margin-top: 150px;
+}
+
+.image-container {
+  text-align: center;
+  max-width: 300px;
+}
+
+.image-container img {
+  width: 120px;
+  height: auto;
+}
+
+.image-caption {
+  font-family: 'Anton', sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.image-description {
+  font-size: 14px;
+  color: #666;
+  margin-top: 5px;
+}
+/* Service Section */
+.main-services{
+  display: flex;
+}
+.services-section {
+  background-color: #f5f5f5;
+  padding: 60px 10%;
+  font-family: "Poppins", sans-serif;
+  color: #333;
+}
+
+.heading h2 {
+  font-family: "Anton", sans-serif;
+  font-size: 48px;
+  text-transform: uppercase;
+  font-weight: 900;
+  letter-spacing: -1px;
+}
+
+.highlight {
+  color: #ff9b42;
+}
+
+.services-container {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.service-box {
+  padding: 50px 0px;
+ border-top: 1px solid#ddd;
+  position: relative;
+  width: 75%;
+}
+
+.service-box h3 {
+  font-family: "Anton", sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.description {
+  font-size: 16px;
+  color: #666;
+  border-left: 4px solid #ff7f11;
+  padding-left: 10px;
+  margin-top: 10px;
+  width: 60%;
+  text-align: justify;
+}
+
+.read-more {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: #ddd;
+  padding: 15px;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.read-more .arrow {
+  font-size: 20px;
+}
+
+.stats-container {
+  display: flex;
+  flex-direction: column;
+  margin-top: 90px;
+  gap: 75px;
+}
+
+.stats-box {
+  text-align: left;
+  margin-left: 20px;
+  font-weight: bold;
+}
+
+.stats-box h2 {
+  font-size: 48px;
+  font-family: "Anton", sans-serif;
+  font-weight: 900;
+  display: flex;
+  align-items: center;
+}
+
+.stats-box .plus {
+  color: #38d9a9;
+  font-size: 36px;
+  margin-left: 5px;
+}
+
+.stats-box p {
+  font-size: 16px;
+  font-weight: 700;
+  margin-top: 5px;
+}
+/*Navbar*/
+/* Sticky Navbar Styles */
+.navbar {
+  position: fixed;  /* Makes it sticky */
+  top: 0;
+  left: 0;
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  z-index: 1000; /* Ensures navbar stays on top */
+}
+
+/* Logo Styles */
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 40px 15px;
+  background-color: #353639;
+}
+
+.logo-box {
+  width: 40px;
+  height: 40px;
+  background: white;
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  border-radius: 5px;
+}
+
+.logo-text {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/* Menu Button */
+.menu-btn {
+  display: flex;
+  gap: 15px;
+  background: #d8d8d8;
+  padding: 15px 15px;
+  border-radius: 50px;
+  cursor: pointer;
+}
+
+.icon {
+  font-size: 30px;
+  color: #ff9b42;
+  background-color: black;
+  padding: 15px 15px;
+  border-radius: 50px;
+}
+
+/* Sidebar Styles */
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 500px;
+  height: 100vh;
+  background: #f5f5f5;
+  transition: right 0.3s ease-in-out;
+  box-shadow: -5px 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar.show {
+  right: 0;
+}
+
+.sidebar .close-btn {
+  background: none;
+  border: none;
+  font-size: 22px;
+  cursor: pointer;
+  color: #ff9b42;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0px 45px;
+  margin-top: 20%;
+    line-height: 70px;
+}
+
+.sidebar ul li {
+  padding: 15px 0;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.sidebar-footer {
+  background-color: #2a9d8f;
+  padding: 40px;
+  display: flex;
+  justify-content: center;
+  gap: 70px;
+  margin-top: 210px;
+}
+
+.sidebar-footer a {
+  color: white;
+  font-size: 20px;
+  text-decoration: none;
+}
+/* Responsive Design */
+@media (max-width: 760px) {
+  .menu-btn {
+    display: flex;
+  }
+
+  .sidebar {
+    width: 100%;
+  }
+  .sidebar-footer{
+    margin-top: 100px;
+
+  }
 }
