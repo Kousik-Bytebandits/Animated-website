@@ -6,7 +6,7 @@ export default function AnimatedWebsite() {
       <Navbar/>
       {/* Hero Section */}
       <section className="head">
-        <h1>CEATIVE <br/>DESIGN <br/> AGENCY.</h1>
+        <h1>CREATIVE <br/>DESIGN <br/> AGENCY.</h1>
        
       </section>
       {/* image section*/}
